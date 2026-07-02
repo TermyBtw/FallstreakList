@@ -21,8 +21,8 @@
     width: 100%;
 }
 .page-list .list .level button {
-    background-color: var(--color-background);
-    color: var(--color-on-background);
+   background-color: #0f0a0a;
+color: #e6d6d6;
     border: none;
     border-radius: 0.5rem;
     padding: 1rem;
