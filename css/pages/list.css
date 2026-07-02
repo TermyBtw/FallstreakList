@@ -29,7 +29,7 @@
 
 .page-list .list .level button {
     background-color: #6f1515 !important;
-    color: #e6d6d6 !important;
+    color: #BF5050 !important;
 
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 0.5rem;
@@ -161,8 +161,3 @@
 
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
-}
-.page-list .list .level.active button {
-    background-color: #4a0f0f !important;
-    color: #e6d6d6 !important;
-}
