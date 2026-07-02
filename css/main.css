@@ -14,22 +14,17 @@
 }
 
 body.dark {
-    color-scheme: dark;
+    --color-background: #0f0a0a;
+    --color-on-background: #e6d6d6;
 
-    --color-background: #140000;
-    --color-on-background: #ffffff;
+    --color-background-hover: #1a0f0f;
 
-    --color-background-hover: #1f0000;
-    --color-on-background-hover: #ffffff;
-
-    --color-primary: #3a0000;
-    --color-primary-disabled: #240000;
+    --color-primary: #6f1515;
     --color-on-primary: #ffffff;
 
-    --color-error: #ff3b3b;
+    --color-error: #b03030;
     --color-on-error: #ffffff;
 }
-
 html,
 body {
     height: 100%;
