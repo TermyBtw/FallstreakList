@@ -12,13 +12,6 @@
     --color-error: #de0000;
     --color-on-error: #ffffff;
 }
-.dark {
-    --color-background: #0f0a0a;
-    --color-on-background: #e6d6d6;
-    --color-background-hover: #1a0f0f;
-    --color-primary: #6f1515;
-    --color-on-primary: #ffffff;
-}
 html,
 body {
     height: 100%;
