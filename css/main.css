@@ -1,35 +1,26 @@
 :root {
-    /* ===== LIGHT MODE ===== */
-    --color-background: #f6b1b1;
-    --color-on-background: #2b0000;
-
-    --color-background-hover: #f29a9a;
-    --color-on-background-hover: #2b0000;
-
-    --color-primary: #b10000;
-    --color-primary-disabled: #8a0000;
-    --color-on-primary: #ffffff;
-
+    --color-background: white;
+    --color-on-background: black;
+    --color-background-hover: #FF9387;
+    --color-on-background-hover: black;
+    --color-primary: ##FF5C47;
+    --color-on-primary: white;
     --color-error: #de0000;
-    --color-on-error: #ffffff;
+    --color-on-error: white;
 }
 
-/* ===== DARK MODE ===== */
-body.dark {
+main.dark,
+header.dark {
     color-scheme: dark;
-
-    --color-background: #120b0b;
-    --color-on-background: #e6d6d6;
-
-    --color-background-hover: #1c1010;
-    --color-on-background-hover: #ffffff;
-
-    --color-primary: #6f1515;
-    --color-primary-disabled: #4d0f0f;
-    --color-on-primary: #ffffff;
-
-    --color-error: #b03030;
-    --color-on-error: #ffffff;
+    --color-background: #1c1b1f;
+    --color-on-background: white;
+    --color-background-hover: #4D0700;
+    --color-on-background-hover: white;
+    --color-primary: #B01200;
+    --color-primary-disabled: #1f213c;
+    --color-on-primary: white;
+    --color-error: #de0000;
+    --color-on-error: white;
 }
 
 html,
@@ -41,8 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: var(--color-background);
-    color: var(--color-on-background);
 }
 
 header,
@@ -50,29 +39,26 @@ main {
     background-color: var(--color-background);
     color: var(--color-on-background);
     display: grid;
-    grid-template-columns:
-        minmax(16rem, 1fr)
-        minmax(16rem, 2fr)
-        minmax(16rem, 1fr);
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
+            16em,
+            1fr
+        );
     column-gap: 2rem;
 }
 
 header {
+    display: flex;
+    padding-inline: calc(25vw - 10rem);
     height: 4rem;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
-    display: flex;
-    align-items: center;
-    padding-inline: calc(25vw - 10rem);
 }
-
 @media screen and (min-width: 1366px) {
     header {
         display: grid;
         padding-inline: 0;
     }
 }
-
 header .logo {
     justify-self: end;
     align-self: center;
@@ -80,17 +66,17 @@ header .logo {
     align-items: flex-end;
     gap: 1rem;
 }
-
 header .nav {
     flex: 1;
 }
 
 main {
+    height: 0;
     flex: 1;
     display: grid;
     grid-template-rows: minmax(0, 1fr);
+    column-gap: 2rem;
 }
-
 main > div {
     overflow-y: auto;
 }
@@ -109,8 +95,6 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-/* ===== PROGRESS BAR ===== */
-
 .enjoyability-wrapper {
     margin-top: 1rem;
 }
@@ -118,7 +102,7 @@ input[type="checkbox"] {
 .progress-bar-bg {
     width: 100%;
     height: 12px;
-    background-color: #2a1414;
+    background-color: #2a2a2a;   /* unfilled track color */
     border-radius: 6px;
     overflow: hidden;
     margin-top: 0.4rem;
@@ -126,14 +110,14 @@ input[type="checkbox"] {
 
 .progress-bar-fill {
     height: 100%;
-    background-color: #bf5050;
+    background-color: #ff7c7c;   /* filled color — swap to match your theme */
     border-radius: 6px;
     transition: width 0.4s ease;
 }
 
 .progress-label {
     font-size: 0.8rem;
-    color: #e6bcbc;
+    color: #aaa;
     margin-top: 0.25rem;
     display: inline-block;
 }
