@@ -1,29 +1,33 @@
 :root {
-    --color-background: #ffe5e5;        
+    --color-background: #f6b1b1;
     --color-on-background: #2b0000;
 
-    --color-background-hover: #ffd1d1;
+    --color-background-hover: #f29a9a;
     --color-on-background-hover: #2b0000;
 
-    --color-primary: #b11212;             
-    --color-on-primary: white;
+    --color-primary: #b10000;
+    --color-primary-disabled: #8a0000;
+    --color-on-primary: #ffffff;
 
     --color-error: #de0000;
-    --color-on-error: white;
+    --color-on-error: #ffffff;
 }
 
-main.dark,
-header.dark {
+body.dark {
     color-scheme: dark;
-    --color-background: #1c1b1f;
-    --color-on-background: white;
-    --color-background-hover: #27262c;
-    --color-on-background-hover: white;
-    --color-primary: #283593;
-    --color-primary-disabled: #1f213c;
-    --color-on-primary: white;
-    --color-error: #de0000;
-    --color-on-error: white;
+
+    --color-background: #140000;
+    --color-on-background: #ffffff;
+
+    --color-background-hover: #1f0000;
+    --color-on-background-hover: #ffffff;
+
+    --color-primary: #3a0000;
+    --color-primary-disabled: #240000;
+    --color-on-primary: #ffffff;
+
+    --color-error: #ff3b3b;
+    --color-on-error: #ffffff;
 }
 
 html,
@@ -32,36 +36,43 @@ body {
 }
 
 body {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
 }
 
 header,
 main {
+    display: grid;
+    grid-template-columns:
+        minmax(16rem, 1fr)
+        minmax(16rem, 2fr)
+        minmax(16rem, 1fr);
+    column-gap: 2rem;
+
     background-color: var(--color-background);
     color: var(--color-on-background);
-    display: grid;
-    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
-            16em,
-            1fr
-        );
-    column-gap: 2rem;
 }
 
 header {
-    display: flex;
-    padding-inline: calc(25vw - 10rem);
     height: 4rem;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+
+    display: flex;
+    align-items: center;
+    padding-inline: calc(25vw - 10rem);
 }
+
 @media screen and (min-width: 1366px) {
     header {
         display: grid;
         padding-inline: 0;
     }
 }
+
 header .logo {
     justify-self: end;
     align-self: center;
@@ -69,17 +80,17 @@ header .logo {
     align-items: flex-end;
     gap: 1rem;
 }
+
 header .nav {
     flex: 1;
 }
 
 main {
-    height: 0;
     flex: 1;
     display: grid;
     grid-template-rows: minmax(0, 1fr);
-    column-gap: 2rem;
 }
+
 main > div {
     overflow-y: auto;
 }
