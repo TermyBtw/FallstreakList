@@ -12,7 +12,6 @@
     padding-right: 2rem;
 }
 
-/* ===================== LIST TABLE ===================== */
 
 .page-list .list {
     table-layout: auto;
@@ -27,7 +26,6 @@
     width: 100%;
 }
 
-/* ===================== LEVEL BUTTON ===================== */
 
 .page-list .list .level button {
     background-color: #6f1515 !important;
@@ -46,27 +44,23 @@
     transition: background-color 150ms ease, transform 100ms ease;
 }
 
-/* hover (no blue allowed anymore 😈) */
 .page-list .list .level button:hover {
     background-color: #5a1010 !important;
     transform: translateY(-1px);
 }
 
-/* active selection */
 .page-list .list .level.active button {
     background-color: #6f1515 !important;
     color: #ffffff !important;
     box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.35);
 }
 
-/* error state */
 .page-list .list .level.error button {
     color: var(--color-error);
     cursor: not-allowed;
     text-decoration: line-through;
 }
 
-/* ===================== LEVEL DETAILS ===================== */
 
 .page-list .level-container .level {
     display: flex;
@@ -87,7 +81,6 @@
     aspect-ratio: 16/9;
 }
 
-/* stats */
 .page-list .level-container .level .stats {
     display: flex;
     justify-content: space-evenly;
@@ -102,7 +95,6 @@
     gap: 1rem;
 }
 
-/* records table */
 .page-list .level-container .level .records {
     table-layout: fixed;
 }
@@ -126,13 +118,11 @@
     text-align: end;
 }
 
-/* links */
 .page-list .meta-container .og a:hover,
 .page-list .level-container .level .records a:hover {
     text-decoration: underline;
 }
 
-/* ===================== META SECTION ===================== */
 
 .page-list .meta {
     display: flex;
@@ -171,4 +161,8 @@
 
 .page-list .meta .editors li a:hover {
     text-decoration: underline;
+}
+.page-list .list .level.active button {
+    background-color: #4a0f0f !important;
+    color: #e6d6d6 !important;
 }
